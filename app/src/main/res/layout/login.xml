@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/denglu"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center" >
+        <FrameLayout
+            android:id="@+id/username_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:gravity="center" >
+            <EditText
+                android:id="@+id/username_edit"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="5dp"
+                android:hint="手机号"
+                android:paddingRight="60dp"
+                android:maxLength="20"
+                android:paddingLeft="55dp" >
+            </EditText>
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@mipmap/zhanghao"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/contry_sn"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="+62"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:visibility="invisible" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/usercode_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_layout"
+            android:layout_marginTop="6dp"
+            android:gravity="center" >
+            <EditText
+                android:id="@+id/userpassword_edit"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="输入密码"
+                android:inputType="textPassword"
+                android:paddingRight="60dp"
+                android:maxLength="20"
+                android:paddingLeft="55dp" >
+            </EditText>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="7dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@mipmap/mima" />
+        </FrameLayout>
+        <Button
+            style="@style/textstyle"
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_below="@+id/usercode_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:background="@mipmap/redbutton"
+            android:onClick="OnMyLoginClick"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/login_button"
+            android:layout_marginStart="27dp"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:text="重置密码"
+            android:clickable="true"
+            android:onClick="OnMyResPwdClick"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/login_error"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/login_button"
+            android:layout_marginEnd="28dp"
+            android:background="#00000000"
+            android:text="立即注册"
+            android:clickable="true"
+            android:onClick="OnMyRegistClick"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</LinearLayout>
